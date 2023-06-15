@@ -1,0 +1,21 @@
+.descrip {
+  width: 400px;
+  padding: 10px 50px 0 0;
+  font-weight: bold;
+}
+
+.product {
+  padding: 20px 0 !important;
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+}
+
+.button {
+  height: 40px;
+  width: 100px;
+}
+
+.price {
+  font-weight: bold;
+  padding: 10px;
+}
