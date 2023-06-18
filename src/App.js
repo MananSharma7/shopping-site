@@ -21,7 +21,6 @@ const App = () => {
 
   const removeFromCart = (product) => {
     const productExist = cartItems.find((item) => item.id === product.id);
-    console.log(cartItems);
     if (productExist.quantity === 1) {
       setCartItems(cartItems.filter((item) => item.id !== product.id));
     } else {

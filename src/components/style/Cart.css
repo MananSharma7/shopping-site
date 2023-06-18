@@ -1,13 +1,13 @@
-.descrip {
-  width: 400px;
-  padding: 10px 50px 0 0;
-  font-weight: bold;
-}
-
 .product {
   padding: 20px 0 !important;
   display: grid !important;
-  grid-template-columns: repeat(5, 1fr) !important;
+  grid-template-columns: repeat(6, 1fr) !important;
+}
+
+.descrip {
+  padding: 10px 50px 0 0;
+  font-weight: bold;
+  grid-column: 2/4;
 }
 
 .button {
@@ -18,4 +18,11 @@
 .price {
   font-weight: bold;
   padding: 10px;
+}
+
+.total {
+  position: absolute;
+  left: 65%;
+  font-size: medium;
+  font-weight: bold;
 }

@@ -2,6 +2,12 @@ import React from 'react';
 import "./style/Cart.css";
 
 const Cart = ({ cartItems, removeFromCart }) => {
+  var total = 0;
+  for (let i = 0; i < cartItems.length; i++) {
+    var item = cartItems[i];
+    total = item.price * item.quantity + total;
+  }
+
   return (
     <div className='ui container'>
       <h2>Cart</h2>
@@ -20,7 +26,7 @@ const Cart = ({ cartItems, removeFromCart }) => {
                   Quantity: {item.quantity}
                 </div>
                 <div className='price'>
-                  ${item.price}
+                  ${item.price * item.quantity}
                 </div>
                 <button
                   className="ui button red mini"
@@ -31,6 +37,7 @@ const Cart = ({ cartItems, removeFromCart }) => {
               </div>
             ))
             }
+            <div className="total">Total: ${total.toFixed(2)}</div>
           </div >
         )
       }
