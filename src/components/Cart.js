@@ -26,7 +26,7 @@ const Cart = ({ cartItems, removeFromCart }) => {
                   Quantity: {item.quantity}
                 </div>
                 <div className='price'>
-                  ${item.price * item.quantity}
+                  ${(item.price * item.quantity).toFixed(2)}
                 </div>
                 <button
                   className="ui button red mini"
